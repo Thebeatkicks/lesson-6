@@ -1,28 +1,37 @@
+const library = []; 
+
 const book = {
     title: "Lord of the Ring", //addBook();
     author: "Tolkien", //addAuthor();
     isRead: true,
 }
 
-const listBooks = []; 
-
 function addBook() {
-    listBooks.push({
-        title: prompt("Title of the book"),
-        author: prompt("Author of the book"),
-        isRead: prompt("is Read? (y/n)"),
-    })
-}
+    
+    const title = prompt("Title of the book"),
+    const author = prompt("Author of the book"),
+    const isRead = prompt("is Read? (y/n)"),
+    
+    const newBook = {
+        title: title,
+        author: author,
+        isRead: isRead,
+    };
 
-function listBook();
+
+    library.push(newBook);
+    alert("Book Added!");
+}
 
 function markAsRead(title) {
     book.isRead(true); 
 }
    
 
+let running = true;
 
-function atm() {
+1
+function menu() {
     while (running) {
         const message = parseFloat(
             prompt(
@@ -51,8 +60,7 @@ function atm() {
     }
 }
 
-
-
+menu();
 /* create an array that has objects in it? 
 
 Instructions: 
