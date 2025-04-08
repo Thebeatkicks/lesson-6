@@ -51,13 +51,19 @@ function addBook() {
 function markAsRead(title) {
     const book = library.find(book => book.title.toLowerCase() === title.toLowerCase());
 
+    if (book) {
+        book.isRead = true;
+        alert("Marked " + book.title + " as read.")
+    } else {
+        alert("Book not found")
+    }
 }
 
 function listBook() {
     if (library.lenght === 0) {
         alert("No books added yet");
     } else {
-        console.log("Your books:")
+        console.log("Your library:")
         for (let book of library) {
             console.log(
                 `Title: ${book.title}, Author: ${book.author}, Read: ${book.isRead ? "Yes" : "No"}`
@@ -102,6 +108,4 @@ listBooks() – display a list of all books (console.log works fine here)
 
 markAsRead(title) – finds a book by title and sets isRead to true 
 
- 
-
-I have created some starting code for you here:  */
+  */
